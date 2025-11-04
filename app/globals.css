@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply transition-colors duration-200;
+}
+
+.light {
+  @apply bg-light-bg text-light-text;
+}
+
+.dark {
+  @apply bg-dark-bg text-dark-text;
+}
+
+.search-input {
+  @apply w-full px-6 py-4 rounded-full text-lg outline-none transition-all duration-200;
+}
+
+.light .search-input {
+  @apply bg-light-surface border-2 border-light-border text-light-text;
+  @apply focus:border-light-text;
+}
+
+.dark .search-input {
+  @apply bg-dark-surface border-2 border-dark-border text-dark-text;
+  @apply focus:border-dark-text;
+}
+
+.search-input::placeholder {
+  @apply opacity-50;
+}
+
+.theme-toggle {
+  @apply p-3 rounded-full cursor-pointer transition-all duration-200;
+}
+
+.light .theme-toggle {
+  @apply bg-light-surface hover:bg-light-border;
+}
+
+.dark .theme-toggle {
+  @apply bg-dark-surface hover:bg-dark-border;
+}
+
+.version-badge {
+  @apply text-sm font-mono opacity-60;
+}
+
+.search-button {
+  @apply px-8 py-3 rounded-full font-medium transition-all duration-200 cursor-pointer;
+}
+
+.light .search-button {
+  @apply bg-light-text text-light-bg hover:opacity-80;
+}
+
+.dark .search-button {
+  @apply bg-dark-text text-dark-bg hover:opacity-80;
+}
+
+.result-card {
+  @apply p-6 rounded-lg transition-all duration-200 cursor-pointer;
+}
+
+.light .result-card {
+  @apply bg-light-surface border border-light-border hover:border-light-text;
+}
+
+.dark .result-card {
+  @apply bg-dark-surface border border-dark-border hover:border-dark-text;
+}
+
+.result-title {
+  @apply text-xl font-semibold mb-2;
+}
+
+.result-description {
+  @apply opacity-70;
+}
+
+.light .result-description {
+  @apply text-light-text-secondary;
+}
+
+.dark .result-description {
+  @apply text-dark-text-secondary;
+}
